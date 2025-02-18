@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem.Controls;
 
@@ -6,6 +7,7 @@ public class PlayerControlar : MonoBehaviour
     public float horizontalInput;
     public float horizontalSpeed;
     public float xRange;
+    public GameObject ProjactilePrefab;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,5 +25,8 @@ public class PlayerControlar : MonoBehaviour
         }
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right*Time.deltaTime*horizontalInput*horizontalSpeed);
+        if (Input.GetMouseButtonDown(0)) {
+            Instantiate(ProjactilePrefab,new Vector3(transform.position.x, transform.position.y + 1, transform.position.z),ProjactilePrefab.transform.rotation);
+        };
     }
 }
