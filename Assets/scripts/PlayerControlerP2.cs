@@ -2,7 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem.Controls;
 
-public class PlayerControlar : MonoBehaviour
+public class PlayerControlarP2 : MonoBehaviour
 {
     public float horizontalInput;
     public float horizontalSpeed;
@@ -33,8 +33,8 @@ public class PlayerControlar : MonoBehaviour
             transform.position = new Vector3 (transform.position.x,transform.position.y,15);
         }
 
-        horizontalInput = Input.GetAxis("Horizontal");
-        verticalInput = Input.GetAxis("Vertical");
+        horizontalInput = Input.GetAxis("HorizontalP2");
+        verticalInput = Input.GetAxis("VerticalP2");
         transform.Translate(Vector3.right*Time.deltaTime*horizontalInput*horizontalSpeed);
         transform.Translate(Vector3.forward*Time.deltaTime*verticalInput*verticalSpeed);
         if (Input.GetMouseButtonDown(0)) {
@@ -42,3 +42,4 @@ public class PlayerControlar : MonoBehaviour
         };
     }
 }
+

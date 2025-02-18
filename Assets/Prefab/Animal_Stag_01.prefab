@@ -621,8 +621,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 074e31e59fa750d468cdaff3941b1fba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  topRange: 50
-  lowerRange: -5
+  topRangez: 50
+  topRangex: 22
+  lowerRangez: -5
+  lowerRangex: -22
 --- !u!65 &769432543217491132
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class DetectColetion : MonoBehaviour
@@ -18,4 +19,5 @@ public class DetectColetion : MonoBehaviour
         Destroy(gameObject);
         Destroy(other.gameObject);
     }
+
 }
